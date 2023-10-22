@@ -1,3 +1,6 @@
+- [English (United States)](#english-united-states)
+- [Português (Brasil)](#português-brasil)
+
 ## English (United States)
 
 This is a simple test project used in the application process for a position as a test analyst at Safe2Pay.  
