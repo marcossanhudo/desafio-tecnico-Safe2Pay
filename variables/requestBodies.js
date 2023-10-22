@@ -3,7 +3,7 @@ module.exports = {
         thatIsValid: {
             'firstName': 'João',
             'lastName': 'da Silva',
-            'email': 'kjjkhsdkjfhdgdkjkj@dasilva.com'
+            'email': 'jkjfhdkjhkjhkjdkjkj@dasilva.com'
         },
         thatIsMissing: {
             // firstName: {},

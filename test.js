@@ -19,15 +19,22 @@ describe('DummyAPI tests', () => {
             .post(endpoint.forPost.creation)
                 .withHeaders(headers.appId)
                 .withJson({ 'owner': '$S{CreatedUserId}', 'text': 'A brief description for the post.' })
+            .expectStatus(200)
+            .stores('CreatedPostId', 'id');
+    })
+
+    it('Same post should be deleted', async () => {
+        await spec()
+            .delete(endpoint.forPost.deletion + '$S{CreatedPostId}')
+                .withHeaders(headers.appId)
             .expectStatus(200);
     })
 
-    /*it('Same post should be deleted', async () => {
-
-    })
-
     it('Same user should be deleted', async () => {
-
-    })*/
+        await spec()
+            .delete(endpoint.forUser.deletion + '$S{CreatedUserId}')
+                .withHeaders(headers.appId)
+            .expectStatus(200);
+    })
 
 });
